@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Registration - Christian Wijaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="brand-name"><a href="index.html">Christian Wijaya</a></h1>
+            <nav class="main-nav desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="event.html" class="nav-link active-link">Events</a>
+                <a href="about.html" class="nav-link">About Us</a>
+            </nav>
+            <div class="header-actions">
+                <div class="header-icons">
+                    <a href="wishlist.html" class="icon-button wishlist-button" aria-label="View wishlist">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="heart-icon">
+                            <path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <button id="header-cart-button" class="icon-button cart-button" aria-label="View shopping cart">
+                        <svg width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                        <span id="header-cart-badge" class="cart-badge" style="display: none;">0</span>
+                    </button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <i class="ti ti-menu-2"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobile-nav-panel" id="mobileNavPanel">
+        <div class="mobile-nav-header">
+            <span>Navigation</span>
+            <button class="close-mobile-nav" id="closeMobileNav" aria-label="Close navigation">
+                 <i class="ti ti-x"></i>
+            </button>
+        </div>
+        <a href="index.html" class="nav-link active-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="event.html" class="nav-link">Events</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="wishlist.html" class="nav-link">Wishlist</a>
+    </nav>
+
+    <div id="shopping-cart-panel" class="shopping-cart-panel">
+        <div class="cart-panel-header">
+            <h3 class="cart-panel-title">Shopping Cart</h3>
+            <button id="close-cart-button" class="icon-button close-cart-button" aria-label="Close cart">
+                <i class="ti ti-x"></i>
+            </button>
+        </div>
+        <div class="cart-content-area">
+            <div id="cart-empty-message" class="cart-empty-message">
+                Your cart is empty.
+            </div>
+            <div id="cart-items-render-area">
+                </div>
+        </div>
+        <div id="cart-summary-area" style="display: none;">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <button id="cart-checkout-button" class="btn btn-gold cart-checkout-button">
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <div class="overlay" id="pageOverlay" style="display: none;"></div>
+
+    <main>
+        <section class="event-hero">
+            <h1>Become a Christian Wijaya Model</h1>
+            <p>Christian Wijaya is seeking fresh, diverse talent to grace our campaigns and runway shows. If you possess a unique presence and embody the spirit of modern elegance, we invite you to register your interest.</p>
+        </section>
+
+        <section class="registration-form-container container">
+            <h2>Model Registration Form</h2>
+            <form id="modelRegistrationForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName">
+                    <div class="error-message" id="fullNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                
+                <div class="form-column-container">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="birthDate">Birth Date:</label>
+                            <input type="date" id="birthDate" name="birthDate">
+                            <div class="error-message" id="birthDateError"></div>
+                        </div>
+                    </div>
+                    <div class="form-column">
+                         <div class="form-group">
+                            <label>Gender:</label>
+                            <div class="gender-options">
+                                <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label>
+                                <input type="radio" id="other" name="gender" value="other"> <label for="other">Other</label>
+                                <br><input type="radio" id="preferNotToSay" name="gender" value="preferNotToSay"> <label for="preferNotToSay">Prefer not to say</label>
+                            </div>
+                            <div class="error-message" id="genderError"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group terms-group">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">I agree to the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>.</label>
+                    <div class="error-message" id="termsError" style="margin-left: 28px; /* Align with checkbox text */"></div>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn btn-gold">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Contact Us</a> |
+                <a href="#">Shipping & Returns</a> |
+                <a href="#">FAQ</a> |
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="social-media">
+                <a href="#" aria-label="Facebook" class="no-fade"
+                ><i class="ti ti-brand-facebook"></i
+                ></a>
+                <a href="#" aria-label="Instagram" class="no-fade"
+                ><i class="ti ti-brand-instagram"></i
+                ></a>
+                <a href="#" aria-label="Twitter" class="no-fade"
+                ><i class="ti ti-brand-twitter"></i
+                ></a>
+            </div>
+            <p class="copyright">&copy; <span id="currentYear"></span> Christian Wijaya. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+    <script src="event-validation.js" defer></script> </body>   
+</body>
+</html>
