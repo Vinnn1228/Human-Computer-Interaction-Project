@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian Wijaya - Luxury Brand</title>
+    <title>My Wishlist - Christian Wijaya</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
@@ -13,7 +13,7 @@
         <div class="container">
             <h1 class="brand-name"><a href="index.html">Christian Wijaya</a></h1>
             <nav class="main-nav desktop-nav">
-                <a href="index.html" class="nav-link active-link">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="products.html" class="nav-link">Products</a>
                 <a href="event.html" class="nav-link">Events</a>
                 <a href="about.html" class="nav-link">About Us</a>
@@ -47,11 +47,11 @@
                  <i class="ti ti-x"></i>
             </button>
         </div>
-        <a href="index.html" class="nav-link active-link">Home</a>
+        <a href="index.html" class="nav-link">Home</a>
         <a href="products.html" class="nav-link">Products</a>
         <a href="event.html" class="nav-link">Events</a>
         <a href="about.html" class="nav-link">About Us</a>
-        <a href="wishlist.html" class="nav-link">Wishlist</a>
+        <a href="wishlist.html" class="nav-link active-link">Wishlist</a>
     </nav>
 
     <div id="shopping-cart-panel" class="shopping-cart-panel">
@@ -82,43 +82,22 @@
     <div class="overlay" id="pageOverlay" style="display: none;"></div>
 
     <main>
-        <section class="hero-section">
-            <h1>Christian Wijaya</h1>
-            <p class="tagline">Elegance Redefined. Crafting Timeless Luxury.</p>
-            <a href="products.html" class="btn btn-gold">Explore Collections</a>
-        </section>
-
-        <section class="brand-introduction container">
-            <h2>Welcome to Christian Wijaya</h2>
-            <p>Welcome to the world of Christian Wijaya, where artistry meets aspiration. We are dedicated to crafting pieces that transcend momentary trends, offering enduring elegance and unparalleled quality. Discover a collection born from passion and precision.</p>
-        </section>
-
-        <section class="latest-products-section container">
-            <h2>Latest Arrivals</h2>
-            <div class="latest-products-grid">
-                <div class="latest-product-item">
-                    <img src="src/Beige1.avif" alt="">
-                    <h3><a href="product-detail.html?product=beige-dress">Beige Button Trim Dress</a></h3>
-                    <a href="product-detail.html?product=beige-dress" class="btn btn-secondary">Discover More</a>
-                </div>
-                <div class="latest-product-item">
-                    <img src="src/shirt.avif" alt="">
-                    <h3><a href="product-detail.html?product=short-shirt"></a>Short-Sleeved Silk Shirt</h3>
-                    <a href="product-detail.html?product=short-shirt" class="btn btn-secondary">Discover More</a>
-                </div>
-                <div class="latest-product-item">
-                    <img src="src/navy.avif" alt="">
-                    <h3><a href="product-detail.html?product=sailor-dress">Sailor Dress</a></h3>
-                    <a href="product-detail.html?product=sailor-dress" class="btn btn-secondary">Discover More</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="brand-philosophy">
+        <section class="page-title-section">
             <div class="container">
-                <h2>Our Philosophy</h2>
-                <p>At Christian Wijaya, we believe that true luxury lies in the details – the meticulous craftsmanship, the finest materials, and a design philosophy that speaks to both timelessness and modernity. Each piece is a testament to our commitment to excellence.</p>
+                <h1>My Wishlist</h1>
             </div>
+        </section>
+
+        <section class="wishlist-page container">
+            <div id="wishlist-empty-message" class="wishlist-empty">
+                <svg width="64" height="58" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.3; margin-bottom: 1.5rem;">
+                    <path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <h3>Your wishlist is empty</h3>
+                <p>Browse our collections and add your favorite pieces to your wishlist.</p>
+                <a href="products.html" class="btn btn-gold" style="margin-top: 1.5rem;">Explore Collections</a>
+            </div>
+            <div id="wishlist-grid" class="wishlist-grid"></div>
         </section>
     </main>
 
@@ -126,10 +105,10 @@
         <div class="container">
             <div class="footer-links">
                 <a href="#">Contact Us</a> |
-                <a href="#">Shipping & Returns</a> |
+                <a href="#">Shipping &amp; Returns</a> |
                 <a href="#">FAQ</a> |
                 <a href="#">Privacy Policy</a> |
-                <a href="#">Terms & Conditions</a>
+                <a href="#">Terms &amp; Conditions</a>
             </div>
             <div class="social-media">
                 <a href="#" aria-label="Facebook" class="no-fade"
@@ -145,7 +124,6 @@
             <p class="copyright">&copy; <span id="currentYear"></span> Christian Wijaya. All Rights Reserved.</p>
         </div>
     </footer>
-
     <script src="script.js" defer></script>
 </body>
 </html>

@@ -24,6 +24,7 @@
                         <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="heart-icon">
                             <path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
+                        <span id="header-wishlist-badge" class="wishlist-badge" style="display: none;">0</span>
                     </a>
                     <button id="header-cart-button" class="icon-button cart-button" aria-label="View shopping cart">
                         <svg width="20" height="20" viewBox="0 0 24 24">
@@ -98,64 +99,114 @@
 
         <section class="product-grid-container container">
             <div class="product-grid">
-                <div class="product-item">
-                    <a href="product-detail.html?product=beige-dress">
-                        <img src="src/Beige1.avif" alt="">
-                    </a>
+                <div class="product-item" data-id="beige-dress">
+                    <div class="product-image-wrapper">
+                        <a href="product-detail.html?product=beige-dress">
+                            <img src="src/Beige1.avif" alt="Beige Button Trim Dress">
+                        </a>
+                        <button class="wishlist-toggle" data-id="beige-dress" aria-label="Add to wishlist">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                    </div>
                     <h3 class="product-name"><a href="product-detail.html?product=beige-dress">Beige Button Trim Dress</a></h3>
                 </div>
-                <div class="product-item">
-                     <a href="product-detail.html?product=maya-sandal">
-                        <img src="src/slepah1.avif" alt="">
-                    </a>
+                <div class="product-item" data-id="maya-sandal">
+                    <div class="product-image-wrapper">
+                        <a href="product-detail.html?product=maya-sandal">
+                            <img src="src/slepah1.avif" alt="Maya Platform Sandal">
+                        </a>
+                        <button class="wishlist-toggle" data-id="maya-sandal" aria-label="Add to wishlist">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                    </div>
                     <h3 class="product-name"><a href="product-detail.html?product=maya-sandal">Maya Platform Sandal</a></h3>
                 </div>
-                <div class="product-item">
-                    <a href="product-detail.html?product=side-trunk">
-                        <img src="src/tas.avif" alt="">
-                    </a>
+                <div class="product-item" data-id="side-trunk">
+                    <div class="product-image-wrapper">
+                        <a href="product-detail.html?product=side-trunk">
+                            <img src="src/tas.avif" alt="Side Trunk">
+                        </a>
+                        <button class="wishlist-toggle" data-id="side-trunk" aria-label="Add to wishlist">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                    </div>
                     <h3 class="product-name"><a href="product-detail.html?product=side-trunk">Side Trunk</a></h3>
                 </div>
-                <div class="product-item">
-                    <a href="product-detail.html?product=blend-suit">
-                        <img src="src/kasmirsut.avif" alt="">
-                    </a>
+                <div class="product-item" data-id="blend-suit">
+                    <div class="product-image-wrapper">
+                        <a href="product-detail.html?product=blend-suit">
+                            <img src="src/kasmirsut.avif" alt="Cashmere Blend Suit">
+                        </a>
+                        <button class="wishlist-toggle" data-id="blend-suit" aria-label="Add to wishlist">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                    </div>
                     <h3 class="product-name"><a href="product-detail.html?product=blend-suit">Cashmere Blend Suit</a></h3>
                 </div>
-                <div class="product-item">
-                    <a href="product-detail.html?product=red-jacket">
-                        <img src="src/redjacket1.avif" alt="">
-                    </a>
+                <div class="product-item" data-id="red-jacket">
+                    <div class="product-image-wrapper">
+                        <a href="product-detail.html?product=red-jacket">
+                            <img src="src/redjacket1.avif" alt="Red Leather Jacket">
+                        </a>
+                        <button class="wishlist-toggle" data-id="red-jacket" aria-label="Add to wishlist">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                    </div>
                     <h3 class="product-name"><a href="product-detail.html?product=red-jacket">Red Leather Jacket</a></h3>
                 </div>
-                <div class="product-item">
-                     <a href="product-detail.html?product=mint-gown">
-                        <img src="src/Mint1.avif" alt="">
-                    </a>
+                <div class="product-item" data-id="mint-gown">
+                    <div class="product-image-wrapper">
+                        <a href="product-detail.html?product=mint-gown">
+                            <img src="src/Mint1.avif" alt="Mint Helm Flounce Gown">
+                        </a>
+                        <button class="wishlist-toggle" data-id="mint-gown" aria-label="Add to wishlist">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                    </div>
                     <h3 class="product-name"><a href="product-detail.html?product=mint-gown">Mint Helm Flounce Gown</a></h3>
                 </div>
-                <div class="product-item">
-                    <a href="product-detail.html?product=saillor-dress">
-                        <img src="src/navy.avif" alt="">
-                    </a>
-                    <h3 class="product-name"><a href="product-detail.html?product=saillor-dress">Sailor Dress</a></h3>
+                <div class="product-item" data-id="sailor-dress">
+                    <div class="product-image-wrapper">
+                        <a href="product-detail.html?product=sailor-dress">
+                            <img src="src/navy.avif" alt="Sailor Dress">
+                        </a>
+                        <button class="wishlist-toggle" data-id="sailor-dress" aria-label="Add to wishlist">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                    </div>
+                    <h3 class="product-name"><a href="product-detail.html?product=sailor-dress">Sailor Dress</a></h3>
                 </div>
-                <div class="product-item">
-                    <a href="product-detail.html?product=short-shirt">
-                        <img src="src/shirt.avif" alt="">
-                    </a>
+                <div class="product-item" data-id="short-shirt">
+                    <div class="product-image-wrapper">
+                        <a href="product-detail.html?product=short-shirt">
+                            <img src="src/shirt.avif" alt="Short-Sleeved Silk Shirt">
+                        </a>
+                        <button class="wishlist-toggle" data-id="short-shirt" aria-label="Add to wishlist">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                    </div>
                     <h3 class="product-name"><a href="product-detail.html?product=short-shirt">Short-Sleeved Silk Shirt</a></h3>
                 </div>
-                <div class="product-item">
-                    <a href="product-detail.html?product=hills-bag">
-                        <img src="src/bagg.avif" alt="">
-                    </a>
+                <div class="product-item" data-id="hills-bag">
+                    <div class="product-image-wrapper">
+                        <a href="product-detail.html?product=hills-bag">
+                            <img src="src/bagg.avif" alt="Hills Pochette">
+                        </a>
+                        <button class="wishlist-toggle" data-id="hills-bag" aria-label="Add to wishlist">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                    </div>
                     <h3 class="product-name"><a href="product-detail.html?product=hills-bag">Hills Pochette</a></h3>
                 </div>
-                <div class="product-item">
-                    <a href="product-detail.html?product=ima-perfume">
-                        <img src="src/parfum.avif" alt="">
-                    </a>
+                <div class="product-item" data-id="ima-perfume">
+                    <div class="product-image-wrapper">
+                        <a href="product-detail.html?product=ima-perfume">
+                            <img src="src/parfum.avif" alt="Imagination Perfume">
+                        </a>
+                        <button class="wishlist-toggle" data-id="ima-perfume" aria-label="Add to wishlist">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.31804 2.31804C1.90017 2.7359 1.5687 3.23198 1.34255 3.77795C1.1164 4.32392 1 4.90909 1 5.50004C1 6.09099 1.1164 6.67616 1.34255 7.22213C1.5687 7.7681 1.90017 8.26417 2.31804 8.68204L10 16.364L17.682 8.68204C18.526 7.83812 19.0001 6.69352 19.0001 5.50004C19.0001 4.30656 18.526 3.16196 17.682 2.31804C16.8381 1.47412 15.6935 1.00001 14.5 1.00001C13.3066 1.00001 12.162 1.47412 11.318 2.31804L10 3.68204L8.68204 2.31804C8.26417 1.90017 7.7681 1.5687 7.22213 1.34255C6.67616 1.1164 6.09099 1 5.50004 1C4.90909 1 4.32392 1.1164 3.77795 1.34255C3.23198 1.5687 2.7359 1.90017 2.31804 2.31804Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                    </div>
                     <h3 class="product-name"><a href="product-detail.html?product=ima-perfume">Imagination Perfume</a></h3>
                 </div>
             </div>
